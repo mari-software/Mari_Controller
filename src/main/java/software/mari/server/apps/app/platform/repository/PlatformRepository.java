@@ -1,4 +1,4 @@
-package software.mari.server.apps.app.platform.model.repository;
+package software.mari.server.apps.app.platform.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import software.mari.server.apps.app.platform.model.entity.PlatformEntity;

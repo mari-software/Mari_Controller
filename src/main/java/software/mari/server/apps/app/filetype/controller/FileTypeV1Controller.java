@@ -1,30 +1,41 @@
 package software.mari.server.apps.app.filetype.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import software.mari.server.apps.app.filetype.model.dto.request.FileTypeRequest;
+import software.mari.server.apps.app.filetype.model.dto.response.FileTypeResponse;
+
+import java.util.List;
 
 @RestController
-@RequestMapping("/api/v1/filetype")
+@RequestMapping("/api/v1/filetypes")
 @RequiredArgsConstructor
 public class FileTypeV1Controller {
+
   @GetMapping
-  public String get() {
-    return "These are the products";
+  public List<FileTypeResponse> find() {
+    return null;
   }
 
   @GetMapping("/{id}")
-  public String getById() {
-    return "These are the products by id";
+  public FileTypeResponse findById(@PathVariable Long id) {
+    return null;
   }
 
   @PostMapping
-  public String postMethodName(@RequestBody String entity) {
-    return entity;
+  public FileTypeResponse create(@RequestBody FileTypeRequest request) {
+    return null;
+  }
+
+  @PatchMapping("/{id}")
+  public FileTypeResponse updateById(@PathVariable Long id) {
+    return null;
+  }
+
+  @DeleteMapping("/{id}")
+  public String deleteById(Long id) {
+    return "Deleted Successfully";
   }
 
 }

@@ -34,9 +34,4 @@ public class GenderEntity extends BaseEntityConfig {
   @Column(name = "description", nullable = false, columnDefinition = "TEXT")
   private String description;
 
-  @ManyToMany(mappedBy = "app_gender", fetch = FetchType.LAZY)
-  @Builder.Default
-  @EqualsAndHashCode.Exclude
-  @ToString.Exclude
-  private Set<UserEntity> user = new HashSet<>();
 }

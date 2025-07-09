@@ -27,7 +27,7 @@ public class MarisoftwareReviewEntity extends BaseEntityConfig {
   @Min(0)
   @Max(5)
   @Column(name = "rating", nullable = false)
-  private Integer rating;
+  private int rating;
 
   @Column(name = "comment", nullable = false, columnDefinition = "TEXT", length = 200)
   private String comment;
